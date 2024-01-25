@@ -1,10 +1,10 @@
 package org.webzio.api.request;
 
 import io.restassured.response.Response;
-import webzio.api.endpoints.ApiEndpoints;
-import webzio.config.AppConfig;
-import webzio.model.ThreadResponse;
-import webzio.utils.RestUtils;
+import org.webzio.api.endpoints.ApiEndpoints;
+import org.webzio.config.AppConfig;
+import org.webzio.model.ThreadResponse;
+import org.webzio.utils.RestUtils;
 
 public class ApiRequests {
 

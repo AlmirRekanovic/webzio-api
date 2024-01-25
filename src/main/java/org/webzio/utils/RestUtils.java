@@ -2,6 +2,8 @@ package org.webzio.utils;
 
 import io.restassured.response.Response;
 import lombok.experimental.UtilityClass;
+import org.webzio.config.AppConfig;
+
 import static io.restassured.RestAssured.given;
 
 @UtilityClass

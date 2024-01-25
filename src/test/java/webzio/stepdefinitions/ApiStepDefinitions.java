@@ -2,8 +2,8 @@ package webzio.stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import webzio.api.request.ApiRequests;
-import webzio.model.ThreadResponse;
+import org.webzio.api.request.ApiRequests;
+import org.webzio.model.ThreadResponse;
 
 import static org.junit.Assert.assertEquals;
 
