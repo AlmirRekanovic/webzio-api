@@ -12,7 +12,7 @@ public class ApiRequests {
         String url = AppConfig.BASE_URL + ApiEndpoints.FILTER_WEB_CONTENT.getEndpoint();
 
         Response response = RestUtils.getRequestWithToken(url, query);
-
+        System.out.println(response.body().toString());
         return response.as(ThreadResponse.class);
     }
 }

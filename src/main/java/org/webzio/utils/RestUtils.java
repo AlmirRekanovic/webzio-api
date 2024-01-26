@@ -8,18 +8,15 @@ import static io.restassured.RestAssured.given;
 
 @UtilityClass
 public class RestUtils {
+    String baseUrl = AppConfig.BASE_URL;
+    String token = AppConfig.API_TOKEN;
 
     public static Response getRequestWithToken(String url, String query) {
+        String url1 = String.format("%s?%s&token=%s", url, query, token);
+
         return given()
-                .baseUri(url)
-                .header("Authorization", "Bearer " + AppConfig.API_TOKEN)
-                .param("q", query)
-                .param("format", "json")
-                .param("sort", "crawled")
-                .param("ts", System.currentTimeMillis())
-                .param("highlight", true)
                 .when()
-                .get()
+                .get(url1)
                 .then()
                 .extract()
                 .response();
