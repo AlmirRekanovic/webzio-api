@@ -15,4 +15,7 @@ public class ApiRequests {
         System.out.println(response.body().toString());
         return response.as(ThreadResponse.class);
     }
+    public static Response postNewsThread(ThreadResponse threadResponse) {
+        return RestUtils.postRequest(ApiEndpoints.FILTER_WEB_CONTENT.getEndpoint(), threadResponse);
+    }
 }

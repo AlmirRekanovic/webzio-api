@@ -1,11 +1,13 @@
 package org.webzio.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
+@Builder
 public class ThreadResponse {
     @JsonProperty("totalResults")
     private int totalResults;
@@ -22,9 +24,11 @@ public class ThreadResponse {
     @JsonProperty("warnings")
     private List<String> warnings;
 
+    @JsonProperty("posts")
     private List<ThreadData> posts;
 
     @Data
+    @Builder
     public static class ThreadData {
         private String uuid;
         private String url;
@@ -49,6 +53,7 @@ public class ThreadResponse {
     }
 
     @Data
+    @Builder
     public static class Social {
         private Facebook facebook;
         private Gplus gplus;
@@ -59,6 +64,7 @@ public class ThreadResponse {
     }
 
     @Data
+    @Builder
     public static class Facebook {
         private int likes;
         private int comments;
@@ -66,29 +72,32 @@ public class ThreadResponse {
     }
 
     @Data
+    @Builder
     public static class Gplus {
         private int shares;
     }
 
     @Data
+    @Builder
     public static class Pinterest {
         private int shares;
     }
 
     @Data
+    @Builder
     public static class Linkedin {
         private int shares;
     }
 
     @Data
+    @Builder
     public static class Stumbledupon {
         private int shares;
     }
 
     @Data
+    @Builder
     public static class Vk {
         private int shares;
     }
-
-    // Other inner classes and fields remain the same
 }
